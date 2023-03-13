@@ -1,0 +1,566 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+:root {
+  --primary: #111011;
+  --secondary: #2b2b2e;
+  --word: #fff;
+  --size: 12px;
+  --spacing: 3px;
+  --bold: 700;
+  --lighter: 400;
+  --button-primary: #620fa1;
+  --button-secundary: #9100ff ;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/card-1.jpg);
+  height: 40rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  position: relative;
+}
+@media screen and (min-width: 700px) {
+  .header {
+    height: 45rem;
+  }
+}
+.header .navegation {
+  color: var(--word);
+  background-color: var(--primary);
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--word);
+  background-color: var(--primary);
+  position: fixed;
+  width: 100%;
+  left: 0;
+  padding: 3px 0px;
+}
+@media screen and (min-width: 700px) {
+  .header .navegation {
+    padding: 7px 0px;
+  }
+}
+.header .navegation .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-left: 3rem;
+}
+.header .navegation .logo ion-icon {
+  font-size: 2rem;
+  color: var(--button-secundary);
+}
+.header .navegation .logo h2 {
+  letter-spacing: var(--spacing);
+  font-weight: var(--bold);
+}
+.header .navegation .nav-amburger {
+  margin-right: 3rem;
+  display: block;
+  cursor: pointer;
+}
+.header .navegation .nav-amburger ion-icon {
+  font-size: 2.5rem;
+}
+@media screen and (min-width: 700px) {
+  .header .navegation .nav-amburger {
+    display: none;
+  }
+}
+.header .navegation .nav-input {
+  display: none;
+}
+.header .navegation .nav-input:checked + .nav-links {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.header .navegation .nav-links {
+  position: fixed;
+  background-color: #26262e;
+  top: 48px;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: -webkit-clip-path 1s ease;
+  transition: clip-path 1s ease;
+  transition: clip-path 1s ease, -webkit-clip-path 1s ease;
+}
+@media screen and (min-width: 700px) {
+  .header .navegation .nav-links {
+    justify-content: end;
+    flex-direction: row;
+    gap: 3rem;
+    margin-right: 3rem;
+    top: 0;
+    position: relative;
+    max-width: 100%;
+    background-color: transparent;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+.header .navegation .nav-links .link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.header .navegation .nav-links .link-icon ion-icon {
+  font-size: 2rem;
+  color: var(--button-secundary);
+}
+@media screen and (min-width: 700px) {
+  .header .navegation .nav-links .link-icon ion-icon {
+    font-size: 1.8rem;
+  }
+}
+.header .navegation .nav-links .link-icon a {
+  text-decoration: none;
+  color: var(--word);
+  font-size: 1.8rem;
+}
+@media screen and (min-width: 700px) {
+  .header .navegation .nav-links .link-icon a {
+    font-size: 1.5rem;
+  }
+}
+.header .legenda-hiking {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  position: absolute;
+  width: 70%;
+  margin: 0rem 0rem 6rem 2rem;
+  gap: 2rem;
+}
+@media screen and (min-width: 700px) {
+  .header .legenda-hiking {
+    gap: 3rem;
+  }
+}
+.header .legenda-hiking .legenda {
+  color: var(--word);
+  font-size: 4.5rem;
+  margin: 0%;
+}
+@media screen and (min-width: 700px) {
+  .header .legenda-hiking .legenda {
+    font-size: 6rem;
+  }
+}
+.header .legenda-hiking a .button-header {
+  border: none;
+  padding: 1rem 0rem;
+  width: 70%;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--word);
+  font-weight: var(--lighter);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background: transparent;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  border: 1px solid #00dcff;
+  box-shadow: 0px 0px 13px 0px rgb(8, 239, 247);
+  cursor: pointer;
+}
+@media screen and (min-width: 700px) {
+  .header .legenda-hiking a .button-header {
+    width: 25%;
+  }
+}
+
+.services-info {
+  padding: 2rem;
+  scroll-margin-top: 10ex;
+}
+@media screen and (min-width: 700px) {
+  .services-info {
+    padding: 5rem 10rem;
+  }
+}
+.services-info h2 {
+  font-size: 3.3rem;
+  margin: 1.7rem 0rem;
+}
+.services-info span {
+  font-size: 1.8rem;
+  font-weight: var(--bold);
+}
+.services-info p {
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.services-card {
+  padding: 0rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+@media screen and (min-width: 700px) {
+  .services-card {
+    flex-direction: row;
+    align-items: initial;
+    padding: 0rem 10rem;
+    gap: 4rem;
+  }
+}
+.services-card .card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 4px 6px 9px 0px rgba(0, 0, 0, 0.49);
+  width: 33rem;
+  transition: transform 0.3s ease;
+}
+.services-card .card .services-img {
+  background-color: #111011;
+  max-height: 18rem;
+  overflow: hidden;
+}
+.services-card .card .services-img .card-img {
+  width: 105%;
+}
+.services-card .card .card-conten {
+  padding: 3rem 2rem;
+}
+.services-card .card .card-conten h3 {
+  font-size: 2.3rem;
+  letter-spacing: 3px;
+  color: rgb(19, 18, 44);
+  margin: 0%;
+}
+.services-card .card .card-conten p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin: 2rem 0rem;
+}
+.services-card .card .card-conten button {
+  border: none;
+  padding: 1rem 0rem;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--word);
+  font-weight: var(--lighter);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  background-color: var(--button-primary);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.services-card .card:hover {
+  transform: scale(1.03);
+}
+
+.parallax {
+  scroll-margin-top: 10ex;
+  margin: 5rem 0rem 4rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/header-senderismo-img.jpg);
+  height: 40rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+@media screen and (min-width: 700px) {
+  .parallax {
+    margin: 7rem 0rem 6rem;
+  }
+}
+.parallax h2 {
+  text-align: center;
+  opacity: 0.5;
+  color: var(--word);
+  font-size: 3rem;
+  padding-top: 15rem;
+}
+@media screen and (min-width: 700px) {
+  .parallax h2 {
+    font-size: 5rem;
+  }
+}
+
+.about-us {
+  padding: 0rem 2rem;
+}
+@media screen and (min-width: 700px) {
+  .about-us {
+    padding: 0rem 10rem;
+  }
+}
+.about-us h2 {
+  font-size: 3.3rem;
+  margin: 0rem 0rem 1.7rem;
+}
+.about-us span {
+  font-size: 1.8rem;
+  font-weight: var(--bold);
+}
+.about-us p {
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.schedule {
+  scroll-margin-top: 10ex;
+  padding: 6rem 2rem;
+  color: white;
+  background: #1a222a;
+  margin: 4rem 0rem 5rem;
+}
+@media screen and (min-width: 700px) {
+  .schedule {
+    padding: 8rem 10rem;
+  }
+}
+.schedule .schedule-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  /* border: 1px solid black; */
+}
+@media screen and (min-width: 700px) {
+  .schedule .schedule-sections {
+    flex-direction: row;
+    gap: 0rem;
+    justify-content: space-evenly;
+  }
+}
+.schedule .schedule-sections .user-data .user-form legend {
+  font-size: 2rem;
+  font-weight: var(--bold);
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 700px) {
+  .schedule .schedule-sections .user-data .user-form legend {
+    margin-bottom: 3rem;
+  }
+}
+.schedule .schedule-sections .user-data .user-form .field-data {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0rem;
+}
+@media screen and (min-width: 700px) {
+  .schedule .schedule-sections .user-data .user-form .field-data {
+    flex-direction: row;
+  }
+}
+.schedule .schedule-sections .user-data .user-form .field-data label {
+  font-size: 1.5rem;
+  margin: 10px 0px 5px;
+  flex: 0.7;
+}
+.schedule .schedule-sections .user-data .user-form .field-data input {
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  flex: 1;
+}
+.schedule .schedule-sections .user-data .user-form .field-data textarea {
+  min-height: 10rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  flex: 1;
+}
+.schedule .schedule-sections .user-data .user-form .field-textarea {
+  margin: 1rem 0rem 1.5rem;
+}
+.schedule .schedule-sections .user-data .user-form .alert-field .alert {
+  padding: 1rem;
+  text-align: center;
+  color: var(--word);
+  border-radius: 5px;
+}
+.schedule .schedule-sections .user-data .user-form .alert-field .alert-danger {
+  background-color: #c40424;
+}
+.schedule .schedule-sections .user-data .user-form .alert-field .alert-seccess {
+  background-color: #078177;
+}
+.schedule .schedule-sections .user-data .user-form button {
+  margin-top: 1.5rem;
+  border: none;
+  padding: 1rem 0rem;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--word);
+  font-weight: var(--lighter);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background-color: var(--button-secundary);
+  border-radius: 3px;
+  cursor: pointer;
+}
+.schedule .schedule-sections .user-schedule legend {
+  font-size: 2rem;
+  font-weight: var(--bold);
+  margin-bottom: 1rem;
+}
+.schedule .schedule-sections .user-schedule .appointment-alert .alert-appointment {
+  text-align: center;
+  padding: 5px 16px;
+  border: 1px solid #0de4d2;
+  box-shadow: 0px 0px 13px 0px rgb(8, 239, 247);
+}
+.schedule .schedule-sections .user-schedule .list-schedule {
+  list-style: none;
+  margin-top: 3rem;
+  padding: 0%;
+}
+.schedule .schedule-sections .user-schedule .list-schedule .appointment {
+  border: 1px solid #878787;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+.schedule .schedule-sections .user-schedule .list-schedule .appointment .firtsName {
+  font-size: 1.7rem;
+  margin: 0rem 0rem 2rem;
+}
+.schedule .schedule-sections .user-schedule .list-schedule .appointment .font-color {
+  color: var(--button-secundary);
+}
+.schedule .schedule-sections .user-schedule .list-schedule .appointment p {
+  font-size: 1.2rem;
+}
+.schedule .schedule-sections .user-schedule .list-schedule .appointment .font-bold {
+  font-weight: var(--bold);
+}
+.schedule .schedule-sections .user-schedule .list-schedule .appointment .btn-appointment {
+  border: none;
+  border-radius: 3px;
+  padding: 7px;
+  color: var(--word);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+.schedule .schedule-sections .user-schedule .list-schedule .appointment .btn-delete {
+  background-color: #c40424;
+  margin-right: 1rem;
+}
+.schedule .schedule-sections .user-schedule .list-schedule .appointment .btn-edit {
+  background-color: #075181;
+}
+
+.info-schedule {
+  padding: 0rem 2rem 3rem;
+}
+@media screen and (min-width: 700px) {
+  .info-schedule {
+    padding: 0rem 10rem 5rem;
+  }
+}
+.info-schedule h2 {
+  font-size: 3.3rem;
+  margin: 0rem 0rem 1.7rem;
+}
+.info-schedule span {
+  font-size: 1.8rem;
+  font-weight: var(--lighter);
+}
+.info-schedule .info-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 2rem 0rem;
+}
+@media screen and (min-width: 700px) {
+  .info-schedule .info-img {
+    padding: 2.5rem 0rem;
+    flex-direction: row;
+    gap: 0rem;
+  }
+}
+.info-schedule .info-img img {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 10px 10px 11px -7px rgba(0, 0, 0, 0.75);
+}
+@media screen and (min-width: 700px) {
+  .info-schedule .info-img img {
+    width: 32%;
+  }
+}
+
+.footer {
+  padding: 6rem 2rem 3rem;
+  background-color: #0a0c0e;
+  color: var(--word);
+  text-align: center;
+}
+@media screen and (min-width: 700px) {
+  .footer {
+    padding: 10rem 10rem 5rem;
+  }
+}
+.footer .leged-footer {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgb(94, 94, 94);
+}
+.footer .leged-footer span {
+  font-size: 1.1rem;
+}
+@media screen and (min-width: 700px) {
+  .footer .leged-footer span {
+    font-size: 1.3rem;
+  }
+}
+.footer .leged-footer .contac-footer {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+@media screen and (min-width: 700px) {
+  .footer .leged-footer .contac-footer {
+    gap: 5rem;
+  }
+}
+.footer .leged-footer .contac-footer ion-icon {
+  font-size: 2rem;
+  color: var(--button-primary);
+}
+.footer .copyright-footer {
+  margin-top: 3rem;
+}/*# sourceMappingURL=style.css.map */

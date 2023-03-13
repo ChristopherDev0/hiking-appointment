@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hiking appointment</title>
+    <link rel="shortcut icon" href="/img/logo-hiking.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <header class="header" id="beginning">
+            <nav class="navegation">
+                <div class="logo">
+                    <ion-icon name="cellular"></ion-icon>
+                    <h2>hiking</h2>
+                </div>
+                <label for="menu" class="nav-amburger">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </label>
+                <input type="checkbox" id="menu" class="nav-input">
+
+                <div class="nav-links">
+                    <div class="link-icon">
+                        <ion-icon name="home"></ion-icon>
+                        <a href="#beginning">beginning</a>
+                    </div>
+                    <div class="link-icon">
+                        <ion-icon name="images"></ion-icon>
+                        <a href="#services">services</a>
+                    </div>
+                    <div class="link-icon">
+                        <ion-icon name="people"></ion-icon>
+                        <a href="#about">About</a>
+                    </div>
+                    <div class="link-icon">
+                        <ion-icon name="chatbox-ellipses"></ion-icon>
+                        <a href="#schedule">schedule</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="legenda-hiking">
+                <h1 class="legenda">professional hiking</h1>
+                <a href="#schedule">
+                    <button class="button-header">schedule now</button>
+                </a>
+           </div>
+    </header>
+
+    <div class="services-info" id="services">
+        <h2>Our services</h2>
+        <span>For regular and intensive walkers there are available services offered by such associations as the Ramblers’ Association in Great Britain.</span>
+        <p>hiking, walking in nature as a recreational activity. Especially among those with sedentary occupations, 
+            hiking is a natural exercise that promotes physical fitness, is economical and convenient, and requires no 
+            special equipment. Because hikers can walk as far as they want, there is no physical strain unless they walk 
+            among hills or mountains. Many persons walk alone, mainly on weekends or holidays, but youth clubs and other 
+            groups arrange rambles, or hikes. The normal length of the walk undertaken is 7 to 12 miles (11 to 19 km) 
+            for a half day or 12 to 20 miles (19 to 32 km) for a full day. Those organized rambles, combining exercise 
+            with enjoyment of the countryside, are in country districts surrounding large towns and follow a planned 
+            route. Most densely populated European towns have hiking trails outside them.</p>
+    </div>
+
+    <section class="services-card">
+        <div class="card">
+            <div class="services-img">
+                <img class="card-img" src="img/card-2.jpg" alt="card">
+            </div>
+            <div class="card-conten">
+                <h3>Canoes</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime necessitatibus quas hic commodi atque repellat?</p>
+                <button>Read more</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="services-img">
+                <img class="card-img" src="img/card-3.jpg" alt="card">
+            </div>
+            <div class="card-conten">
+                <h3>Fishing</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime necessitatibus quas hic commodi atque repellat?</p>
+                <button>Read more</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="services-img">
+                <img class="card-img" src="img/card-4.jpg" alt="card">
+            </div>
+            <div class="card-conten">
+                <h3>Cabins</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime necessitatibus quas hic commodi atque repellat?</p>
+                <button>Read more</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="parallax" id="about">
+        <h2>The best journeys</h2>
+    </div>
+
+    <div class="about-us">
+        <h2>About us and our commitment</h2>
+        <span>We are a professional team dedicated to offering hiking, fishing and accommodation services.</span>
+        <p>Our organizations encourage hiking and preserve footpaths, bridle paths, and rights of way in parkland and 
+            recognized open spaces in areas of natural beauty against the encroachment of builders, local authorities, 
+            and national undertakings. They also help hikers to obtain hostel accommodation and, by exchange of 
+            information and services, enable persons of one country to pursue these activities in others. The Appalachian 
+            Trail Conference (U.S.), with the aid of its member organizations in 14 states, maintains campsites and a trail
+            more than 2,000 miles (3,200 km) long between Mount Katahdin in Maine and Mount Oglethorpe in Georgia; it 
+            publishes information on conditions of the camps and trail.</p>
+    </div>
+
+    <section class="schedule" id="schedule">
+        <div class="schedule-sections">
+            <div class="user-data">
+                <form class="user-form" id="form">
+                    <legend>Data to schedule an appointment</legend>
+                    <div class="field-data">
+                        <label>First name</label>
+                        <input type="text" id="firts-name" name="firtsName" placeholder="your first name">
+                    </div>
+                    <div class="field-data">
+                        <label>Last name</label>
+                        <input type="text" id="last-name" name="lastName" placeholder="your last name">
+                    </div>
+                    <div class="field-data">
+                        <label>Phone number</label>
+                        <input type="tel" id="phone" name="numberPhone" placeholder="your phone number">
+                    </div>
+                    <div class="field-data">
+                        <label>Schedule date</label>
+                        <input type="date" id="date" name="scheduledDate" placeholder="your schedule date">
+                    </div>
+                    <div class="field-data">
+                        <label>Arrival time</label>
+                        <input type="time" id="time" name="scheduledTime" placeholder="your arrival time">
+                    </div>
+                    <div class="field-data field-textarea">
+                        <label>Extra data</label>
+                        <textarea name="dataExtra" id="extra-data"></textarea>
+                    </div>
+                    <div class="alert-field"></div>
+                    <button type="submit" class="butoon-form">schedule now</button>
+                </form>
+            </div>
+            
+            <div class="user-schedule">
+                <legend class="legend-ul">Scheduled: </legend>
+                <div class="appointment-alert"></div>
+                <ul id="ul-schedule" class="list-schedule"></ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="info-schedule">
+        <h2>Look at some of our photos</h2>
+        <span>We are a professional team dedicated to offering hiking, fishing and accommodation services.</span>
+        <div class="info-img">
+            <img src="/img/header-img.jpg" alt="">
+            <img src="/img/parallax-senderismo.jpg" alt="info-img">
+            <img src="/img/parallax-img01.jpg" alt="info-img">
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="leged-footer">
+            <span>We are a team of professionals dedicated to offering hiking, fishing and lodging services.</span>
+            <div class="contac-footer">
+                <ion-icon name="logo-twitter"></ion-icon>
+                <ion-icon name="logo-instagram"></ion-icon>
+                <ion-icon name="logo-youtube"></ion-icon>
+                <ion-icon name="logo-facebook"></ion-icon>
+                <ion-icon name="mail"></ion-icon>
+            </div>
+        </div>
+        <div class="copyright-footer">
+            <span>Copyright © 2023 Christopher patiño santos</span>
+        </div>
+    </footer>
+
+    <script src="/js/app.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
